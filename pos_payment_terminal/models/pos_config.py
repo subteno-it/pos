@@ -3,12 +3,12 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 
-from odoo import models, fields
+from odoo import fields, models
 
 
 class PosConfig(models.Model):
-    _inherit = 'pos.config'
+    _inherit = "pos.config"
 
     iface_payment_terminal = fields.Boolean(
-        'Payment Terminal',
-        help="A payment terminal is available on the Proxy")
+        "Payment Terminal", help="A payment terminal is available on the Proxy"
+    )

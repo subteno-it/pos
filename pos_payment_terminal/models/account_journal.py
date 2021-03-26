@@ -2,13 +2,14 @@
 # © 2015-2016 Akretion (Alexis de Lattre <alexis.delattre@akretion.com>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import models, fields
+from odoo import fields, models
 
 
 class AccountJournal(models.Model):
-    _inherit = 'account.journal'
+    _inherit = "account.journal"
 
     pos_terminal_payment_mode = fields.Selection(
-        selection=[('card', 'Card'), ('check', 'Check')],
-        string='Terminal Payment Mode',
-        help="Select the payment mode sent to the payment terminal")
+        selection=[("card", "Card"), ("check", "Check")],
+        string="Terminal Payment Mode",
+        help="Select the payment mode sent to the payment terminal",
+    )
